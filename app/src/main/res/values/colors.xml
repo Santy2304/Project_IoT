@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="white">#FFFFFF</color>
+    <color name="light_green">#49E234</color>
+    <color name="dark_green">#0B660B</color>
+    <color name="black">#000000</color>
+    <color name="red">#DC2845</color>
+    <color name="blue">#3558E2</color>
+    <color name="gray">#949595</color>
     <color name="md_theme_primary">#2E6A44</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>
     <color name="md_theme_primaryContainer">#B1F1C1</color>
