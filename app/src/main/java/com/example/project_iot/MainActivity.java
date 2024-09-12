@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.inicio_auxiliar);
     }
     //En el futuro será el login xd
+    //Para organizar flujos con botones
+
     public void verCliente(View view) {
         startActivity(new Intent(this, ClienteActivity.class));
     }
@@ -26,10 +28,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void verAdministrador(View view) {
         startActivity(new Intent(this, AdministradorActivity.class));
-
     }
     public void verSuperadministrador(View view) {
         startActivity(new Intent(this, SuperAdminActivity.class));
-
+    }
+    public void verLogin(View view) {
+        startActivity(new Intent(this, LoginActivity.class));
     }
 }

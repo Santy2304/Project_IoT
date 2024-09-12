@@ -15,12 +15,10 @@ public class ClienteActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_principal_cliente2);
         //Agregamos funcionalidades a los botones
-
     }
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {

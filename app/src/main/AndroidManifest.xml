@@ -12,29 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.Project_IoT"
         tools:targetApi="31">
-        <activity
-            android:name=".perfilCliente"
-            android:exported="false" />
-        <activity
-            android:name=".principalCliente"
-            android:exported="false" />
 
-
-        <activity android:name=".ClienteActivity"
-            android:exported="true"
-            android:parentActivityName=".MainActivity"/>
-
-        <activity android:name=".AdministradorActivity"
-            android:exported="true"
-            android:parentActivityName=".MainActivity"/>
-
-        <activity android:name=".SuperAdminActivity"
-            android:exported="true"
-            android:parentActivityName=".MainActivity"/>
-
-        <activity android:name=".RepartidorActivity"
-            android:exported="true"
-            android:parentActivityName=".MainActivity"/>
 
         <activity
             android:name=".MainActivity"
@@ -44,6 +22,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+                android:name=".LoginActivity"
+                android:exported="true"
+                android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ClienteActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".AdministradorActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".SuperAdminActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".RepartidorActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
