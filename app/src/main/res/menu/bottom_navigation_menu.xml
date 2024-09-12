@@ -7,19 +7,19 @@
         android:enabled="true"
         android:icon="@drawable/receipt_long"
         android:title="Ordenes"
-        app:showAsAction="ifRoom"/>
+        />
 
     <item
         android:id="@+id/restaurant"
         android:enabled="true"
         android:icon="@drawable/storefront"
         android:title="Restaurantes"
-        app:showAsAction="ifRoom"/>
+        />
 
     <item
         android:id="@+id/profile"
         android:enabled="true"
         android:icon="@drawable/iconoperfil"
         android:title="Perfil"
-        app:showAsAction="ifRoom"/>
+        />
 </menu>
