@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.project_iot.R;
+import com.example.project_iot.databinding.ActivityMainBinding;
 
 
 public class vistaPrincipalCliente extends Fragment {
@@ -34,16 +35,12 @@ public class vistaPrincipalCliente extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         return inflater.inflate(R.layout.fragment_vista_principal_cliente, container, false);
     }
 }
