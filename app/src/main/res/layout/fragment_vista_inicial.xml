@@ -40,13 +40,14 @@
         app:srcCompat="@drawable/deligo" />
 
     <Button
-        android:id="@+id/elevatedButton"
+        android:id="@+id/continuarInicioInicio"
         android:layout_width="150dp"
         android:layout_height="56dp"
         android:backgroundTint="@color/light_green"
         android:gravity="center"
         android:text="Continuar"
         android:textColor="@color/white"
+        android:onClick="saltarInicioSesion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

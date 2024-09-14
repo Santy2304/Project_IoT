@@ -23,8 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-                android:name=".LoginActivity"
+        <activity android:name=".LoginActivity"
                 android:exported="true"
                 android:parentActivityName=".MainActivity"/>
         <activity android:name=".ClienteActivity"
