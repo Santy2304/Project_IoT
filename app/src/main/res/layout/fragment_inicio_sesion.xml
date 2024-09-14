@@ -38,7 +38,9 @@
     <LinearLayout
         android:layout_width="348dp"
         android:layout_height="379dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/border_form"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,18 +48,33 @@
         app:layout_constraintVertical_bias="0.823">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField"
-            style="?attr/textInputFilledStyle"
+            android:id="@+id/correo"
             android:layout_width="300sp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12sp"
-            android:hint="Correo"
-            app:boxStrokeErrorColor="@color/red"
-            app:shapeAppearance="?attr/shapeAppearanceSmallComponent">
+            android:layout_marginTop="22sp"
+            android:layout_marginStart="24sp"
+            android:hint="Correo">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contraseña"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22sp"
+            android:layout_marginStart="24sp"
+            app:endIconMode="password_toggle"
+            android:hint="Contraseña">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
