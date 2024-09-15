@@ -17,7 +17,7 @@
         app:menu="@menu/bottom_navigation_menu" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/fragmentoPrincipalCliente"
         android:name="com.example.project_iot.ClienteFragments.vistaPrincipalCliente"
         android:layout_width="408dp"
         android:layout_height="652dp"
