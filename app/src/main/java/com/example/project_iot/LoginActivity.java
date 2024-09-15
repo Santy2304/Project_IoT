@@ -32,16 +32,12 @@ public class LoginActivity extends AppCompatActivity {
     public void saltarInicioSesion(View view){
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmento_main_login);
-
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
                     .replace(R.id.fragmento_main_login , InicioSesion.class, null)
                     .commit();
-
         }
-
-
     }
 
 }
