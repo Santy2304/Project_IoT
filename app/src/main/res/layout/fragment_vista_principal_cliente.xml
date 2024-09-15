@@ -122,6 +122,8 @@
                 android:layout_margin="2dp"
                 android:orientation="horizontal">
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/goButton"
+                    android:onClick="saltarAResturante"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
