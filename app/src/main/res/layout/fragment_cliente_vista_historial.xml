@@ -2,27 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout7"
+    android:id="@+id/frameLayout8"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Generales.notificaciones">
+    tools:context=".ClienteFragments.ClienteVistaHistorial">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="240sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Notificaciones"
+        android:text="Historial de Pedidos"
         android:textColor="@color/light_green"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/noti_button"
@@ -57,32 +56,82 @@
         app:tint="@color/white" />
 
 
+    <Button
+        android:id="@+id/orderButton"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/light_green"
+        android:fontFamily="sans-serif-condensed"
+        android:text="En camino"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/colorCustomColor1Container_mediumContrast"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Entregados"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/orderButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fiterButton"
+        style="?attr/floatingActionButtonSmallStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/light_green"
+        android:contentDescription="filtro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_button"
+        app:srcCompat="@drawable/filterpx"
+        app:tint="@color/white" />
+
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
-        android:layout_width="390sp"
-        android:layout_height="130sp"
-        android:layout_marginTop="150dp"
         style="?attr/materialCardViewElevatedStyle"
+        android:layout_width="400sp"
+        android:layout_height="130sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="220dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="110sp"
                 android:layout_height="130sp"
                 app:srcCompat="@drawable/bembos_logo"
                 android:scaleType="centerCrop"
                 />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="10dp">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -109,23 +158,44 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
+                    android:text="Bembos"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"/>
 
-                    android:text="El repartidor a recogido tu pedido del restaurante."
-                    android:textAppearance="?attr/textAppearanceTitleMedium" />
-
-
-                <TextView
-                    android:layout_marginTop="8sp"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Ver detalle"
-                    android:textColor="@color/light_green"
-                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8sp"
+                    android:padding="5sp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="S/50.00"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Ver detalle"
+                        android:textColor="@color/light_green"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"/>
+
+                </LinearLayout>
+
+
 
             </LinearLayout>
 
         </LinearLayout>
+
+
     </com.google.android.material.card.MaterialCardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
