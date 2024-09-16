@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/principal"
-        android:enabled="true"
-        android:icon="@drawable/baseline_home_24"
-        android:title="Panel de usuarios"
-        />
-
-    <item
         android:id="@+id/restaurant"
         android:enabled="true"
         android:icon="@drawable/storefront"
         android:title="Registro restaurantes"
+        />
+
+    <item
+        android:id="@+id/principal"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Panel de usuarios"
         />
 
     <item
