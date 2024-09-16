@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.project_iot.ClienteFragments.ClienteVistaRestaurante;
+import com.example.project_iot.Login.InicioSesion;
 import com.example.project_iot.databinding.ActivityMainBinding;
 
 public class ClienteActivity extends AppCompatActivity {
@@ -54,5 +56,33 @@ public class ClienteActivity extends AppCompatActivity {
                     .commit();
         }
     }
+
+    public void saltarInicioSesion(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmento_main_login);
+
+
+        View layout = findViewById(R.id.fragmento_main_login);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                convertDpToPx(409), // Ancho en píxeles
+                convertDpToPx(726)  // Alto en píxeles
+        );
+        layout.setLayoutParams(params);
+
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmento_main_login , InicioSesion.class, null)
+                    .commit();
+        }
+
+
+    }
+
+    private int convertDpToPx(int dp) {
+        float density = getResources().getDisplayMetrics().density;
+        return Math.round(dp * density);
+    }
+
 
 }
