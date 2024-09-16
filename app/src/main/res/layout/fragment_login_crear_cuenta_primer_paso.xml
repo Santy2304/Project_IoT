@@ -17,7 +17,7 @@
             android:layout_marginStart="5sp"
             android:layout_marginTop="40sp"
             android:src="@drawable/icons8_izquierda_circulo_48"
-            android:onClick="saltarInicioSesion"/>
+            android:onClick="regresaInicioSesion"/>
 
         <TextView
             android:layout_marginTop="15sp"
@@ -34,8 +34,8 @@
         android:backgroundTint="#FBF5F0"
         android:layout_gravity="center_horizontal"
         android:layout_width="348dp"
-        android:layout_height="379dp"
-        android:layout_marginTop="40sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25sp"
         android:background="@drawable/border_form"
         android:orientation="vertical" >
 
@@ -72,45 +72,47 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30sp"
             android:layout_gravity="center_horizontal"
-            android:hint="Tipo de documento"
+            android:hint="Correo"
             app:startIconDrawable="@drawable/mail_24px"
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:maxLength="24"/>
         </com.google.android.material.textfield.TextInputLayout>
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="118dp"
-            android:entries="@array/elementos"
-            android:spinnerMode="dropdown" />
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="320sp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30sp"
             android:layout_gravity="center_horizontal"
-            android:hint="Número de documento"
-            app:startIconDrawable="@drawable/mail_24px"
+            android:hint="Fecha de nacimiento"
+            app:startIconDrawable="@drawable/cake_24px"
             >
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/birthday"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:clickable="true"
+                android:maxLength="24"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
-
-
-
-
+        <Button
+            android:id="@+id/continuar1"
+            android:onClick="CrearCuenta2"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18sp"
+            android:backgroundTint="@color/light_green"
+            android:text="  Continuar  "
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="12sp"/>
     </LinearLayout>
-
-
-
-
 
     </LinearLayout>
 
