@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".Login.InicioSesion">
     <TextView
         android:id="@+id/textView4"
@@ -35,6 +36,7 @@
         app:srcCompat="@drawable/deligo" />
 
     <LinearLayout
+        android:backgroundTint="#FBF5F0"
         android:layout_width="348dp"
         android:layout_height="379dp"
         android:layout_marginTop="80sp"
@@ -45,6 +47,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.792">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -58,7 +61,8 @@
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:maxLength="20"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -74,22 +78,39 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:maxLength="20"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="¿Olvidaste tu contraseña? Recupérala aquí"
-            android:textSize="15sp"
+        <LinearLayout
             android:layout_marginTop="10sp"
-            android:layout_marginStart="20sp"
-            android:layout_gravity="center"
-            android:layout_marginEnd="20sp"
-        />
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_theme_scrim"
+                android:text="¿Olvidaste tu contraseña?"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:textColor="@color/light_green"
+                android:text="Crea una"
+                android:onClick="CrearCuenta"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
         <Button
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:backgroundTint="@color/light_green"
+            android:textStyle="bold"
             android:id="@+id/IniciarSesion"
             android:layout_marginTop="8sp"
             android:layout_width="wrap_content"
@@ -101,7 +122,9 @@
         <Button
             app:icon="@drawable/icons8_google_120"
             android:backgroundTint="@color/light_green"
+            android:backgroundTintMode="src_over"
             android:layout_marginTop="8sp"
+            android:textStyle="bold"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:id="@+id/IniciarSesionGoogle"
             android:textColor="@color/white"
@@ -111,15 +134,35 @@
             android:text="Continuar con google"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8sp"
-            android:layout_gravity="center_horizontal"
-            android:text="¿No tienes una cuenta? Crear una aquí"
-            android:textSize="15sp"
-            />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45sp"
+                android:text="¿No tienes una cuenta?"
+                android:textColor="@color/md_theme_scrim"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="8sp"
+                android:text=" Crear una aquí"
+                android:textColor="@color/light_green"
+                android:textSize="15sp"
+
+                android:textStyle="bold" />
+        </LinearLayout>
 
 
     </LinearLayout>
