@@ -5,6 +5,13 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name ="roundedImageViewRoundedEditar">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+
+    </style>
+
 <!-- Para el titulo en los app - bar -->
     <style name="ToolbarTitleStyle">
         <item name="android:textSize">35sp</item>

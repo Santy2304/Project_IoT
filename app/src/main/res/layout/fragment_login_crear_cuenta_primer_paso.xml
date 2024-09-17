@@ -17,7 +17,7 @@
             android:layout_marginStart="5sp"
             android:layout_marginTop="40sp"
             android:src="@drawable/icons8_izquierda_circulo_48"
-            android:onClick="regresaInicioSesion"/>
+            android:onClick="RegresarInicioSesion"/>
 
         <TextView
             android:layout_marginTop="15sp"
@@ -50,7 +50,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLength="20"/>
+                android:maxLength="20"
+                android:inputType="text"
+                android:singleLine="true"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -64,7 +66,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLength="20"/>
+                android:maxLength="20"
+                android:inputType="text"
+                android:singleLine="true"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -78,10 +82,13 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLength="24"/>
+                android:maxLength="20"
+                android:inputType="text"
+                android:singleLine="true"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/birthday_layout"
             android:layout_width="320sp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30sp"
@@ -93,9 +100,12 @@
                 android:id="@+id/birthday"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="date"
                 android:clickable="true"
-                android:maxLength="24"/>
+                android:text="01/01/2020"
+                android:onClick="showDateTimePicker"
+                android:maxLength="20"
+                android:singleLine="true"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 

@@ -1,8 +1,5 @@
 package com.example.project_iot.Login;
 
-import android.annotation.SuppressLint;
-import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,17 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.project_iot.R;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
-
-import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LoginCrearCuentaPrimerPaso#newInstance} factory method to
+ * Use the {@link LoginCrearCuentaFinal#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LoginCrearCuentaPrimerPaso extends Fragment {
+public class LoginCrearCuentaFinal extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,7 +26,7 @@ public class LoginCrearCuentaPrimerPaso extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public LoginCrearCuentaPrimerPaso() {
+    public LoginCrearCuentaFinal() {
         // Required empty public constructor
     }
 
@@ -43,11 +36,11 @@ public class LoginCrearCuentaPrimerPaso extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LoginCrearCuentaPrimerPaso.
+     * @return A new instance of fragment LoginCrearCuentaFinal.
      */
     // TODO: Rename and change types and number of parameters
-    public static LoginCrearCuentaPrimerPaso newInstance(String param1, String param2) {
-        LoginCrearCuentaPrimerPaso fragment = new LoginCrearCuentaPrimerPaso();
+    public static LoginCrearCuentaFinal newInstance(String param1, String param2) {
+        LoginCrearCuentaFinal fragment = new LoginCrearCuentaFinal();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,18 +57,10 @@ public class LoginCrearCuentaPrimerPaso extends Fragment {
         }
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View view = inflater.inflate(R.layout.fragment_login_crear_cuenta_primer_paso, container, false);
-
-        return view;
-
-
+        return inflater.inflate(R.layout.fragment_login_crear_cuenta_final, container, false);
     }
 }
-
-
