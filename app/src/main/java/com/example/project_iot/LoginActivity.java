@@ -1,22 +1,29 @@
 package com.example.project_iot;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.project_iot.Login.FinalizarRegistro;
 import com.example.project_iot.Login.InicioSesion;
+import com.example.project_iot.Login.LoginCambiarPasswordFinal;
 import com.example.project_iot.Login.LoginCambiarPasswordPrimerPaso;
 import com.example.project_iot.Login.LoginCambiarPasswordSegundoPaso;
 import com.example.project_iot.Login.LoginCambiarPasswordTercerPaso;
@@ -44,6 +51,12 @@ public class LoginActivity extends AppCompatActivity {
                     .add(R.id.fragmento_main_login, VistaInicial.class, null)
                     .commit();
         }
+        //pARA GESTIONAR RETROCESO DESDE LOS BOTONES DE ANDROID
+//        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+//            @Override
+//            public void handleOnBackPressed() {
+//            }
+//        });
     }
 
     //METODO PARA SALTAR ENTRE FRAGMENTOS
@@ -160,7 +173,7 @@ public class LoginActivity extends AppCompatActivity {
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
-                    .replace(R.id.fragmento_main_login , FinalizarRegistro.class, null)
+                    .replace(R.id.fragmento_main_login , LoginCambiarPasswordFinal.class, null)
                     .commit();
         }
     }
@@ -180,7 +193,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public void cambiarPasswordSegundoPaso(View view){
+    public void cambiarPasswordSegundoPaso(View view) throws InterruptedException {
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmento_main_login);
 
@@ -190,6 +203,9 @@ public class LoginActivity extends AppCompatActivity {
                     .replace(R.id.fragmento_main_login , LoginCambiarPasswordSegundoPaso.class, null)
                     .commit();
         }
+
+
+
     }
 
 
@@ -215,6 +231,11 @@ public class LoginActivity extends AppCompatActivity {
     public void iniciarSesion(View view) {
         startActivity(new Intent(this, ClienteActivity.class));
     }
+
+
+
+
+    //RETROCESO USANDO BOTON DE ANDROID
 
 
 }

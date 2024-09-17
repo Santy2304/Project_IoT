@@ -4,9 +4,12 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.project_iot.R;
 
@@ -60,7 +63,109 @@ public class LoginCambiarPasswordSegundoPaso extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_login_cambiar_password_segundo_paso, container, false);
+
+        EditText code1 = view.findViewById(R.id.code1);
+        EditText code2 = view.findViewById(R.id.code2);
+        EditText code3 = view.findViewById(R.id.code3);
+        EditText code4 =  view.findViewById(R.id.code4);
+        EditText code5 =  view.findViewById(R.id.code5);
+        EditText code6 =  view.findViewById(R.id.code6);
+
+        code1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Este método se puede dejar en blanco
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se puede dejar en blanco
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() == 1) {  // Cambiará de foco después de escribir una letra
+                    code2.requestFocus();  // Cambia el foco al segundo EditText
+                }
+            }
+        });
+        code2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Este método se puede dejar en blanco
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se puede dejar en blanco
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() == 1) {  // Cambiará de foco después de escribir una letra
+                    code3.requestFocus();  // Cambia el foco al segundo EditText
+                }
+            }
+        });
+        code3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Este método se puede dejar en blanco
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se puede dejar en blanco
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() == 1) {  // Cambiará de foco después de escribir una letra
+                    code4.requestFocus();  // Cambia el foco al segundo EditText
+                }
+            }
+        });
+        code4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Este método se puede dejar en blanco
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se puede dejar en blanco
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() == 1) {  // Cambiará de foco después de escribir una letra
+                    code5.requestFocus();  // Cambia el foco al segundo EditText
+                }
+            }
+        });
+        code5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Este método se puede dejar en blanco
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Este método se puede dejar en blanco
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() == 1) {  // Cambiará de foco después de escribir una letra
+                    code6.requestFocus();  // Cambia el foco al segundo EditText
+                }
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login_cambiar_password_segundo_paso, container, false);
+        return view;
     }
+
+
+
+
+
+
+
 }
