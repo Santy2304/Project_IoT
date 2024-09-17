@@ -119,7 +119,6 @@
             android:layout_marginTop="6dp"
             android:entries="@array/categoria_list"
             android:popupBackground="@drawable/spinner_border"
-            android:prompt="Categoría"
             android:spinnerMode="dropdown" />
 
 

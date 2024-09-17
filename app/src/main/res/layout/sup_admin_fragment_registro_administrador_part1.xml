@@ -133,7 +133,6 @@
             android:layout_marginTop="6dp"
             android:entries="@array/elementos"
             android:popupBackground="@drawable/spinner_border"
-            android:prompt="@string/tipoDocumento"
             android:spinnerMode="dropdown" />
 
         <com.google.android.material.textfield.TextInputLayout
