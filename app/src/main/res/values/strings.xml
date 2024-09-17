@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">Project_IoT</string>
     <string name="title">DeliGO</string>
-    <string name="apellido">Apellido</string>
-    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellidos</string>
+    <string name="nombre">Nombres</string>
     <string name="domicilio">Domicilio</string>
-    <string name="dni">DNI</string>
+    <string name="dni">Número de documento</string>
+    <string name="tipoDocumento">Tipo de documento</string>
     <string name="nacimiento">Fecha de nacimiento</string>
     <string name="telefono">Telefono</string>
+    <string name="restaurante">Restaurante</string>
+    <string name="ubicacionLocal">Ubicación</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Strings related to login -->

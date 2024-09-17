@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SuperAdminActivity">
+    tools:context=".SuperAdminFragments.VistaPerfilCliente">
 
     <!--
     <com.google.android.material.appbar.AppBarLayout
@@ -31,8 +31,12 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/light_green"
             app:menu="@menu/top_app_bar_super_admin"
+            android:layout_marginTop="25dp"
             app:navigationIcon="@drawable/icons8_izquierda_circulo_48"
-            app:title="@string/title" />
+            app:title="@string/title"
+            app:titleTextAppearance="@style/ToolbarTitleStyle"
+            app:titleCentered="true"/>
+
 
 
 
@@ -190,7 +194,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="425dp"
-        android:layout_height="80dp"
+        android:layout_height="120dp"
         android:background="@color/light_green"
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="bottom|center"
