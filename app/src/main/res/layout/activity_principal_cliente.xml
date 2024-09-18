@@ -4,30 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".principalCliente">
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentoPrincipalCliente"
-        android:name="com.example.project_iot.ClienteFragments.vistaPrincipalCliente"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_cliente_vista_tracking"/>
+        android:orientation="vertical">
 
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentoPrincipalCliente"
+            android:layout_marginTop="25sp"
+            android:name="com.example.project_iot.ClienteFragments.vistaPrincipalCliente"
+            android:layout_width="match_parent"
+            android:layout_height="780sp"
+            tools:layout="@layout/fragment_vista_principal_cliente"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_marginTop="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu" />
 
+    </LinearLayout>
     <!--app:labelVisibilityMode="unlabeled"-->
 </androidx.constraintlayout.widget.ConstraintLayout>
 
