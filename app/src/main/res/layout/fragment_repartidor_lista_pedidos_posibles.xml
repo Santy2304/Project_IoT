@@ -198,6 +198,7 @@
                             android:layout_height="wrap_content"
                             app:backgroundTint="@color/md_theme_secondary"
                             android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
                             app:tint="@color/white"
                             app:srcCompat="@drawable/mapa_icon_icon" />
                     </LinearLayout>
@@ -216,6 +217,7 @@
                             app:backgroundTint="@color/md_theme_secondary"
                             android:contentDescription="Detalles"
                             app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
                             app:srcCompat="@drawable/details" />
                     </LinearLayout>
                     <LinearLayout
@@ -231,11 +233,1440 @@
                             android:layout_height="wrap_content"
                             app:backgroundTint="@color/md_theme_secondary"
                             android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
                             app:tint="@color/white"
                             app:srcCompat="@drawable/check_circle_24px" />
                     </LinearLayout>
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
 
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="90sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                            app:srcCompat="@drawable/bembos_logo"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#32"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/md_theme_primary"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado: Recibido"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:layout_marginTop="1.5sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="120sp"
+                            android:text="Precio: S/.12.00"
+                            android:textStyle="bold"
+                            android:textSize="11.5sp"
+                            android:textColor="@color/md_theme_errorContainer_mediumContrast"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Mapa"
+                            android:onClick="verRepartidorVerMapaPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/mapa_icon_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Detalles"
+                            app:tint="@color/white"
+                            android:onClick="verDetalleCompraDelivery"
+                            app:srcCompat="@drawable/details" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="-15sp"
+                        android:layout_width="70sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            style="?attr/floatingActionButtonSmallStyle"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginStart="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/md_theme_secondary"
+                            android:contentDescription="Aceptar"
+                            android:onClick="verRepartidorConfirmacionTomarPedido"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/check_circle_24px" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
