@@ -5,6 +5,10 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+    <style name ="otroradius">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">25%</item>
+    </style>
 
     <style name ="roundedImageViewRoundedEditar">
         <item name="cornerFamily">rounded</item>

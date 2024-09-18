@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RepartidorFragments.DetalleCompraDelivery">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:background="@color/light_green"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icons8_izquierda_circulo_48"
+                android:onClick="verPedidos"/>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DeliGO"
+                android:layout_marginStart="60sp"
+                android:textSize="45sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:layout_marginStart="40sp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/notifications_24px"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView3"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15sp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                app:srcCompat="@drawable/hineilll" />
+            
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="410sp"
+            android:layout_height="100sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bembos2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detalle compra"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                style="?attr/floatingActionButtonSmallStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160sp"
+                android:backgroundTint="@color/light_green"
+                android:contentDescription="filtro"
+                app:text="Aceptar"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/check_circle_24px" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total de productos: 5"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginTop="8sp"
+                android:layout_marginStart="5sp"
+                android:paddingLeft="-5sp"
+                android:paddingRight="-5sp"
+                android:textSize="10sp"
+                android:backgroundTint="@color/light_green"
+                android:layout_width="80sp"
+                android:layout_height="35sp"
+                android:text="Mayor precio"
+                app:backgroundTint="@color/md_theme_secondary"
+                />
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Destino: Jirón ayacucho 137"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Precio por delivery: s/.100.00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Costo: S/.120.00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="400sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="650sp">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp"
+                android:layout_width="400sp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="380sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/card_repartidor"
+                    android:layout_height="100sp">
+
+                    <LinearLayout
+                        android:layout_width="100sp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="75sp"
+                            android:layout_height="75sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="15sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="13sp"
+                            app:shapeAppearanceOverlay="@style/otroradius"
+                            app:srcCompat="@drawable/hamburguesa_royal"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="100sp"
+                        android:layout_height="match_parent"
+                        android:text="Tocino con queso"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:layout_width="100sp"
+                        android:layout_height="match_parent"
+                        android:text="5 unidades"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        />
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>
