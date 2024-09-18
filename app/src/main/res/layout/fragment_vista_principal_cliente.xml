@@ -39,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="85sp"
                 android:layout_marginTop="25sp"
+                android:onClick="vistaNotificaciones"
                 android:backgroundTint="@color/light_green"
                 android:contentDescription="Notificaciones"
                 app:srcCompat="@drawable/notifications_24px"

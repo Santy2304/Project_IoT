@@ -21,6 +21,7 @@ import com.example.project_iot.ClienteFragments.ClienteVistaRestaurante;
 import com.example.project_iot.ClienteFragments.ClienteVistaTracking;
 import com.example.project_iot.ClienteFragments.ClienteVistaUnPlato;
 import com.example.project_iot.ClienteFragments.vistaPrincipalCliente;
+import com.example.project_iot.Generales.notificaciones;
 import com.example.project_iot.Login.InicioSesion;
 import com.example.project_iot.databinding.ActivityMainBinding;
 
@@ -155,7 +156,16 @@ public class ClienteActivity extends AppCompatActivity {
                     .commit();
         }
     }
-
+    public void vistaNotificaciones(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, notificaciones.class, null)
+                    .commit();
+        }
+    }
     private int convertDpToPx(int dp) {
         float density = getResources().getDisplayMetrics().density;
         return Math.round(dp * density);
