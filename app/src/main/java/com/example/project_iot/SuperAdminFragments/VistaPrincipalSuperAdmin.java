@@ -36,6 +36,6 @@ public class VistaPrincipalSuperAdmin extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.sup_admin_fragment_perfil_cliente, container, false);
+        return inflater.inflate(R.layout.sup_admin_fragment_panel_cliente, container, false);
     }
 }
