@@ -57,6 +57,7 @@
                 android:contentDescription="Carrito"
                 app:srcCompat="@drawable/shopping_cart_24px"
                 app:tint="@color/white" />
+
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/shapeableImageView3"
                 android:layout_width="50sp"
@@ -64,6 +65,7 @@
                 android:layout_marginStart="8sp"
                 android:scaleType="centerCrop"
                 android:layout_marginTop="25sp"
+                android:onClick="vistaHistorial"
                 app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                 app:srcCompat="@drawable/hineilll" />
         </LinearLayout>
