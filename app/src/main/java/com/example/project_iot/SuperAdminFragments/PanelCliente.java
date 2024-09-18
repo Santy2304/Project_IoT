@@ -68,9 +68,11 @@ public class PanelCliente extends Fragment {
 
 
         //Esto es para el carousel (no sé si funciona pipipi) pista2:"Bajo la luz de la luna un pozo de flecha y flor"
-        viewPager = view.findViewById(R.id.view_pager);
+        /*viewPager = view.findViewById(R.id.view_pager);
         adapter = new CarouselAdapter(Arrays.asList(R.drawable.costumer_green, R.drawable.deliver_green2, R.drawable.admin_green));
         viewPager.setAdapter(adapter);
+
+         */
         return view;
     }
 }

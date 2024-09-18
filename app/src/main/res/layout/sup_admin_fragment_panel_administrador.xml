@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Panel de restaurante"
+                android:text="Panel de usuarios"
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -54,6 +54,93 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.4" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="411dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="399dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/costumer_green" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:text="Cliente"
+                            android:textSize="12sp"
+                             />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="82dp"
+                            android:layout_height="89dp"
+                            android:src="@drawable/deliver_green2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Repartidor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="80dp"
+                            android:layout_height="87dp"
+                            android:src="@drawable/admin_green" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Administrador"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
 
 
             <LinearLayout
@@ -82,25 +169,41 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        style="?attr/floatingActionButtonSmallStyle"
-                        android:id="@+id/bt_agregar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12sp"
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/bt_alfabetico"
+                        android:layout_marginTop="8sp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:layout_marginStart="18sp"
+                        android:paddingLeft="-5sp"
+                        android:paddingRight="-5sp"
+                        android:textSize="10sp"
                         android:backgroundTint="@color/light_green"
-                        android:contentDescription="Agregar restaurante"
-                        app:tint="@color/white"
-                        app:srcCompat="@drawable/baseline_add_business_24" />
-
-
+                        android:layout_width="80sp"
+                        android:layout_height="35sp"
+                        android:text="Alfabetico"
+                        app:backgroundTint="@color/light_green"
+                        />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/bt_reciente"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginStart="5sp"
+                        android:paddingLeft="-5sp"
+                        android:paddingRight="-5sp"
+                        android:textSize="10sp"
+                        android:backgroundTint="@color/light_green"
+                        android:layout_width="80sp"
+                        android:layout_height="35sp"
+                        android:text="Más reciente"
+                        app:backgroundTint="@color/light_green"
+                        />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         style="?attr/floatingActionButtonSmallStyle"
                         android:id="@+id/bt_filtro"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="282sp"
+                        android:layout_marginStart="160sp"
                         android:backgroundTint="@color/light_green"
                         android:contentDescription="filtro"
                         app:tint="@color/white"
@@ -138,13 +241,13 @@
                                 android:layout_height="52dp"
                                 android:background="@drawable/circular_image_background"
                                 android:clipToOutline="true"
-                                android:src="@drawable/bembos_logo" />
+                                android:src="@drawable/costumer_green" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="9dp"
-                                android:text="Nombre: Bembos\n Administrador: Admin\n Ubicación:Av.Universitaria"
+                                android:text="Nombre: Lancelot del Lago\n DNI:12345678\n Correo:admin@deligo.com"
                                 android:textSize="10sp"
                                 android:textStyle="bold" />
 
@@ -221,6 +324,15 @@
 
 
     </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- lo del carousel, pero no funcionó
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+        -->
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
