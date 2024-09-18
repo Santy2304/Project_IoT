@@ -4,16 +4,22 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+
+import com.example.project_iot.ClienteFragments.ClienteVistaTracking;
 import com.example.project_iot.R;
 
-public class PerfilSuperAdmin extends Fragment {
+public class RegistroAdministrador1 extends Fragment {
 
+    Spinner tipoDocumento;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +30,7 @@ public class PerfilSuperAdmin extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public PerfilSuperAdmin() {
+    public RegistroAdministrador1() {
         // Required empty public constructor
     }
 
@@ -37,8 +43,8 @@ public class PerfilSuperAdmin extends Fragment {
      * @return A new instance of fragment ClienteVistaTracking.
      */
     // TODO: Rename and change types and number of parameters
-    public static PerfilSuperAdmin newInstance(String param1, String param2) {
-        PerfilSuperAdmin fragment = new PerfilSuperAdmin();
+    public static RegistroAdministrador1 newInstance(String param1, String param2) {
+        RegistroAdministrador1 fragment = new RegistroAdministrador1();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,7 +65,21 @@ public class PerfilSuperAdmin extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.sup_admin_fragment_perfil, container, false);
+        View view = inflater.inflate(R.layout.sup_admin_fragment_registro_administrador_part1, container, false);
+
+        tipoDocumento = (Spinner) view.findViewById(R.id.spinner);
+
+        tipoDocumento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getActivity(), "Tipo de Documento: " + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
         return view;
     }
