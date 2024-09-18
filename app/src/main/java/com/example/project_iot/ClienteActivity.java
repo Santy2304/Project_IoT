@@ -14,7 +14,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.project_iot.ClienteFragments.ClienteVistaCarrito;
+import com.example.project_iot.ClienteFragments.ClienteVistaConfirmacionCompra;
+import com.example.project_iot.ClienteFragments.ClienteVistaHistorial;
 import com.example.project_iot.ClienteFragments.ClienteVistaRestaurante;
+import com.example.project_iot.ClienteFragments.ClienteVistaTracking;
+import com.example.project_iot.ClienteFragments.ClienteVistaUnPlato;
+import com.example.project_iot.ClienteFragments.vistaPrincipalCliente;
 import com.example.project_iot.Login.InicioSesion;
 import com.example.project_iot.databinding.ActivityMainBinding;
 
@@ -46,6 +52,7 @@ public class ClienteActivity extends AppCompatActivity {
         return super.onContextItemSelected(item);
     }
 
+    //-------------PARA IR A UNA VISTA----------------------
     public void saltarAResturante(View view){
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmentoPrincipalCliente);
@@ -56,7 +63,6 @@ public class ClienteActivity extends AppCompatActivity {
                     .commit();
         }
     }
-
     public void saltarInicioSesion(View view){
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmento_main_login);
@@ -79,10 +85,82 @@ public class ClienteActivity extends AppCompatActivity {
 
     }
 
+    public void vistaCarrito(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaCarrito.class, null)
+                    .commit();
+        }
+    }
+    public void vistaConfirmaciónCompra(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaConfirmacionCompra.class, null)
+                    .commit();
+        }
+    }
+    public void vistaHistorial(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaHistorial.class, null)
+                    .commit();
+        }
+    }
+    public void vistaRestaurante(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaRestaurante.class, null)
+                    .commit();
+        }
+    }
+    public void vistaTracking(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaTracking.class, null)
+                    .commit();
+        }
+    }
+    public void vistaUnPlato(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaUnPlato.class, null)
+                    .commit();
+        }
+    }
+    public void vistaPrincipalCliente(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, vistaPrincipalCliente.class, null)
+                    .commit();
+        }
+    }
+
     private int convertDpToPx(int dp) {
         float density = getResources().getDisplayMetrics().density;
         return Math.round(dp * density);
     }
+
 
 
 }
