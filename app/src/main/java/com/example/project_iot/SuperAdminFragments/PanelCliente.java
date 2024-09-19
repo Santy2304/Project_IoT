@@ -1,5 +1,6 @@
 package com.example.project_iot.SuperAdminFragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -26,6 +27,8 @@ public class PanelCliente extends Fragment {
     private ViewPager2 viewPager;
     private CarouselAdapter adapter;
     private MaterialToolbar topAppBar;
+
+    private OnLogEventClickListener mListener;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -68,6 +71,17 @@ public class PanelCliente extends Fragment {
         }
     }
 
+    public interface OnLogEventClickListener {
+        void onLogEventClick();
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mListener = (OnLogEventClickListener) context;
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -80,7 +94,7 @@ public class PanelCliente extends Fragment {
         adapter = new CarouselAdapter(Arrays.asList(R.drawable.costumer_green, R.drawable.deliver_green2, R.drawable.admin_green));
         viewPager.setAdapter(adapter);
 
-         */
+
 
         topAppBar.setOnMenuItemClickListener(new MaterialToolbar.OnMenuItemClickListener() {
             @Override
@@ -94,6 +108,21 @@ public class PanelCliente extends Fragment {
                 }
             }
         });
+
+         */
+        topAppBar = view.findViewById(R.id.topAppBar);
+        topAppBar.setOnMenuItemClickListener(new MaterialToolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.log_event) {
+                    mListener.onLogEventClick();
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
         return view;
     }
+
 }
