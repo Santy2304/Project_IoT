@@ -85,7 +85,6 @@ public class ClienteActivity extends AppCompatActivity {
 
 
     }
-
     public void vistaCarrito(View view){
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmentoPrincipalCliente);
