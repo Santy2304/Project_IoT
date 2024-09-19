@@ -23,9 +23,19 @@
     <string name="login_failed">"Inicio sesión fallido"</string>
 
     <string-array name="elementos">
+        <item>Tipo de Documento</item>
         <item>Documento Nacional de Identidad</item>
         <item>Pasaporte</item>
     </string-array>
+
+    <string-array name="categoria_list">
+        <item>Categoría</item>
+        <item>Categoría 1</item>
+        <item>Categoría 2</item>
+        <item>Categoría 3</item>
+        <item>Categoría 4</item>
+    </string-array>
+
 
     <dimen name="margin_top">250sp</dimen>
 

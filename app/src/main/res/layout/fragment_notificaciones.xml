@@ -7,125 +7,581 @@
     android:layout_height="match_parent"
     tools:context=".Generales.notificaciones">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Notificaciones"
-        android:textColor="@color/light_green"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/noti_button"
-        style="?attr/floatingActionButtonSmallStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/light_green"
-        android:contentDescription="Notificaciones"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.641"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/notifications_24px"
-        app:tint="@color/white" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/cart_button"
-        style="?attr/floatingActionButtonSmallStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/light_green"
-        android:contentDescription="Carrito"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
-        app:layout_constraintStart_toEndOf="@+id/noti_button"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/shopping_cart_24px"
-        app:tint="@color/white" />
-
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
-        android:layout_width="390sp"
-        android:layout_height="130sp"
-        android:layout_marginTop="150dp"
-        style="?attr/materialCardViewElevatedStyle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_width="110sp"
-                android:layout_height="130sp"
-                app:srcCompat="@drawable/bembos_logo"
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="15sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Notificaciones"
+                android:textColor="@color/light_green"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
                 android:scaleType="centerCrop"
-                />
+                android:layout_marginTop="15sp"
+                android:layout_marginStart="135sp"
+                app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                app:srcCompat="@drawable/hineilll" />
+        </LinearLayout>
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="400sp"
+            android:layout_height="750sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="700sp"
                 android:orientation="vertical"
-                android:padding="10dp">
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="111dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5sp">
-                    <TextView
-                        android:layout_width="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardViewElevatedStyle"
+                    android:layout_width="380sp"
+                    android:layout_height="130sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="#42"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textColor="@color/light_green"
-                        android:layout_weight="1"
-                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <ImageView
+                            android:layout_width="110sp"
+                            android:layout_height="130sp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/bembos_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="#42"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                                    android:textColor="@color/light_green" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="23/09/24 - 19:00"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/black"
+                                android:text="El repartidor a recogido tu pedido del restaurante."
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Ver detalle"
+                                android:textAppearance="?attr/textAppearanceTitleMedium"
+                                android:textColor="@color/light_green" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardViewElevatedStyle"
+                    android:layout_width="380sp"
+                    android:layout_height="130sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="23/09/24 - 19:00"
-                        android:textAppearance="?attr/textAppearanceTitleMedium" />
-                </LinearLayout>
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed"
+                        <ImageView
+                            android:layout_width="110sp"
+                            android:layout_height="130sp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/bembos_logo" />
 
-                    android:text="El repartidor a recogido tu pedido del restaurante."
-                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="#42"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                                    android:textColor="@color/light_green" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="23/09/24 - 19:00"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/black"
+                                android:text="El repartidor a recogido tu pedido del restaurante."
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
 
 
-                <TextView
-                    android:layout_marginTop="8sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Ver detalle"
-                    android:textColor="@color/light_green"
-                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Ver detalle"
+                                android:textAppearance="?attr/textAppearanceTitleMedium"
+                                android:textColor="@color/light_green" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardViewElevatedStyle"
+                    android:layout_width="380sp"
+                    android:layout_height="130sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="110sp"
+                            android:layout_height="130sp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/bembos_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="#42"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                                    android:textColor="@color/light_green" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="23/09/24 - 19:00"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/black"
+                                android:text="El repartidor a recogido tu pedido del restaurante."
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Ver detalle"
+                                android:textAppearance="?attr/textAppearanceTitleMedium"
+                                android:textColor="@color/light_green" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardViewElevatedStyle"
+                    android:layout_width="380sp"
+                    android:layout_height="130sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="110sp"
+                            android:layout_height="130sp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/bembos_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="#42"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                                    android:textColor="@color/light_green" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="23/09/24 - 19:00"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/black"
+                                android:text="El repartidor a recogido tu pedido del restaurante."
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Ver detalle"
+                                android:textAppearance="?attr/textAppearanceTitleMedium"
+                                android:textColor="@color/light_green" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardViewElevatedStyle"
+                    android:layout_width="380sp"
+                    android:layout_height="130sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="110sp"
+                            android:layout_height="130sp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/bembos_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="#42"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                                    android:textColor="@color/light_green" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="23/09/24 - 19:00"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/black"
+                                android:text="El repartidor a recogido tu pedido del restaurante."
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Ver detalle"
+                                android:textAppearance="?attr/textAppearanceTitleMedium"
+                                android:textColor="@color/light_green" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardViewElevatedStyle"
+                    android:layout_width="380sp"
+                    android:layout_height="130sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="110sp"
+                            android:layout_height="130sp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/bembos_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="#42"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                                    android:textColor="@color/light_green" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="23/09/24 - 19:00"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/black"
+                                android:text="El repartidor a recogido tu pedido del restaurante."
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Ver detalle"
+                                android:textAppearance="?attr/textAppearanceTitleMedium"
+                                android:textColor="@color/light_green" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardViewElevatedStyle"
+                    android:layout_width="380sp"
+                    android:layout_height="130sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="110sp"
+                            android:layout_height="130sp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/bembos_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="#42"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                                    android:textColor="@color/light_green" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="23/09/24 - 19:00"
+                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/black"
+                                android:text="El repartidor a recogido tu pedido del restaurante."
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Ver detalle"
+                                android:textAppearance="?attr/textAppearanceTitleMedium"
+                                android:textColor="@color/light_green" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
 
             </LinearLayout>
 
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+        </ScrollView>
+    </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:textColor="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="24/04/2024 - 19:10 pm"
             app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +109,7 @@
 
             <TextView
                 android:id="@+id/recibido"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Recibido"
@@ -123,6 +125,8 @@
                 android:id="@+id/preparacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
+
                 android:text="En Preparación"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginEnd="14dp"
@@ -133,6 +137,7 @@
 
             <TextView
                 android:id="@+id/listo"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Listo"
@@ -144,6 +149,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <TextView
+                android:textColor="@color/black"
                 android:id="@+id/camino"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -157,6 +163,7 @@
 
             <TextView
                 android:id="@+id/encamino"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Entregado"
@@ -219,6 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Número de pedido: 42"
+                android:textColor="@color/black"
                 android:layout_marginTop="5sp"
                 android:layout_marginStart="15sp"
                 android:textSize="12sp"
@@ -255,6 +263,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Hamburguesa Royal"
+                            android:textColor="@color/black"
                             android:fontFamily="sans-serif-condensed-medium"
                             android:textAppearance="?attr/textAppearanceTitleMedium" />
                         <TextView
@@ -263,6 +272,7 @@
                             android:layout_marginTop="18sp"
                             android:fontFamily="sans-serif-condensed-medium"
                             android:text="Cantidad: 1"
+                            android:textColor="@color/black"
                             android:textAppearance="?attr/textAppearanceTitleMedium" />
 
                     </LinearLayout>
@@ -279,6 +289,7 @@
                             android:layout_marginTop="8sp"
                             android:fontFamily="sans-serif-condensed-medium"
                             android:text="S/8.00"
+                            android:textColor="@color/black"
                             android:textAppearance="?attr/textAppearanceTitleMedium" />
 
 

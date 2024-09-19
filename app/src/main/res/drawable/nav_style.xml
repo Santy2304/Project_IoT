@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo del ítem seleccionado -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorCustomColor1Container" /> <!-- Color verde -->
+            <size
+                android:layout_height="12sp"
+                android:layout_width="12sp"/>
+
+
+            <corners android:radius="100dp" /> <!-- Bordes redondeados -->
+        </shape>
+    </item>
+
+    <!-- Fondo del ítem no seleccionado (transparente) -->
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Fondo transparente -->
+        </shape>
+    </item>
+</selector>
