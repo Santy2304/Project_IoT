@@ -21,6 +21,9 @@
     <string name="invalid_username">Nombre de usuario no valido</string>
     <string name="invalid_password">La contraseña debe tener más de 5 caracteres</string>
     <string name="login_failed">"Inicio sesión fallido"</string>
+    <string name="precio">Precio</string>
+    <string name="nombre1">Nombre</string>
+    <string name="descripcion">Descripción</string>
 
     <string-array name="elementos">
         <item>Tipo de Documento</item>

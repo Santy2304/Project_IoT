@@ -7,7 +7,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,12 +38,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140sp"
                 android:layout_marginTop="25sp"
-                android:onClick="vistaNotificaciones"
                 android:backgroundTint="@color/light_green"
                 android:contentDescription="Notificaciones"
+                android:onClick="vistaNotificaciones"
                 app:srcCompat="@drawable/notifications_24px"
                 app:tint="@color/white" />
-
 
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -46,37 +50,38 @@
                 android:layout_width="50sp"
                 android:layout_height="50sp"
                 android:layout_marginStart="8sp"
-                android:scaleType="centerCrop"
                 android:layout_marginTop="25sp"
                 android:onClick="vistaHistorial"
+                android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                 app:srcCompat="@drawable/hineilll" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10sp">
+            android:layout_marginTop="10sp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="0sp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/bembos_logo"
-                 />
-
+                android:src="@drawable/bembos_logo" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bembos"
-                android:textSize="30sp"
-                android:layout_marginTop="30sp"
                 android:layout_marginStart="15sp"
+                android:layout_marginTop="30sp"
+                android:text="Bembos"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <Button
                 style="@style/Widget.Material3.Button.ElevatedButton"
@@ -85,55 +90,54 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="30sp"
                 android:backgroundTint="@color/light_green"
-                android:text="Crear nuevo plato"
+                android:gravity="center_horizontal"
+                android:text="Nuevo plato"
                 android:textColor="@color/white"
-                android:textStyle="bold"
                 android:textSize="18sp"
-                app:iconSize="25sp"
-                app:icon="@drawable/intento"
-                />
+                android:textStyle="bold"
+                app:icon="@drawable/mas"
+                app:iconSize="25sp" />
 
         </LinearLayout>
+
         <com.google.android.material.search.SearchBar
             android:id="@+id/search_bar"
             android:layout_width="380sp"
             android:layout_height="40sp"
             android:layout_marginTop="15sp"
-            android:hint="Buscar"
-            />
+            android:hint="Buscar" />
 
         <LinearLayout
-            android:layout_marginTop="15sp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
-                android:layout_marginTop="8sp"
-                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_width="80sp"
+                android:layout_height="35sp"
                 android:layout_marginStart="18sp"
-                android:paddingLeft="-5sp"
-                android:paddingRight="-5sp"
-                android:textSize="10sp"
-                android:backgroundTint="@color/light_green"
-                android:layout_width="80sp"
-                android:layout_height="35sp"
-                android:text="Menú"
-                app:backgroundTint="@color/md_theme_secondary"
-                />
-            <com.google.android.material.button.MaterialButton
-                android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginTop="8sp"
-                android:layout_marginStart="5sp"
+                android:backgroundTint="@color/light_green"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:paddingLeft="-5sp"
                 android:paddingRight="-5sp"
+                android:text="Menú"
                 android:textSize="10sp"
-                android:backgroundTint="@color/light_green"
+                app:backgroundTint="@color/md_theme_secondary" />
+
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="80sp"
                 android:layout_height="35sp"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="8sp"
+                android:backgroundTint="@color/light_green"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="-5sp"
+                android:paddingRight="-5sp"
                 android:text="Bebidas"
-                app:backgroundTint="@color/md_theme_secondary"
-                />
+                android:textSize="10sp"
+                app:backgroundTint="@color/md_theme_secondary" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 style="?attr/floatingActionButtonSmallStyle"
@@ -142,16 +146,16 @@
                 android:layout_marginStart="160sp"
                 android:backgroundTint="@color/light_green"
                 android:contentDescription="filtro"
-                app:tint="@color/white"
-                app:srcCompat="@drawable/filterpx" />
+                app:srcCompat="@drawable/filterpx"
+                app:tint="@color/white" />
         </LinearLayout>
 
 
-        <ScrollView
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="400sp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="480sp">
+            android:layout_height="480sp"
+            android:layout_gravity="center_horizontal">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -163,13 +167,13 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="20sp"
                     android:orientation="horizontal">
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="-3sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -179,14 +183,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -198,19 +204,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -223,36 +229,36 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
 
                     </com.google.android.material.card.MaterialCardView>
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="25sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -262,14 +268,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -281,19 +289,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -306,24 +314,24 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -338,13 +346,13 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="20sp"
                     android:orientation="horizontal">
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="-3sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -354,14 +362,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -373,19 +383,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -398,36 +408,36 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
 
                     </com.google.android.material.card.MaterialCardView>
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="25sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -437,14 +447,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -456,19 +468,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -481,24 +493,24 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -506,19 +518,20 @@
                     </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20sp"
                     android:orientation="horizontal">
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="-3sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -528,14 +541,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -547,19 +562,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -572,36 +587,36 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
 
                     </com.google.android.material.card.MaterialCardView>
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="25sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -611,14 +626,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -630,19 +647,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -655,24 +672,24 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -680,19 +697,20 @@
                     </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20sp"
                     android:orientation="horizontal">
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="-3sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -702,14 +720,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -721,19 +741,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -746,36 +766,36 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
 
                     </com.google.android.material.card.MaterialCardView>
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="25sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -785,14 +805,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -804,19 +826,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -829,24 +851,24 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -854,19 +876,20 @@
                     </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20sp"
                     android:orientation="horizontal">
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="-3sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -876,14 +899,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -895,19 +920,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -920,36 +945,36 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
 
                     </com.google.android.material.card.MaterialCardView>
+
                     <com.google.android.material.card.MaterialCardView
                         style="?attr/materialCardViewElevatedStyle"
                         android:layout_width="185dp"
                         android:layout_height="195sp"
-                        android:layout_marginBottom="0dp"
                         android:layout_marginStart="25sp"
-                        >
+                        android:layout_marginBottom="0dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -959,14 +984,16 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
-                                android:onClick="vistaUnPlato"
                                 android:contentDescription="foodImage"
+                                android:onClick="vistaUnPlato"
                                 android:scaleType="centerCrop"
                                 app:srcCompat="@drawable/hamburguesa_royal" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <LinearLayout
                                     android:layout_width="110sp"
                                     android:layout_height="wrap_content"
@@ -978,19 +1005,19 @@
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Hamburguesa Royal"
-                                        android:textColor="@color/black"
                                         android:textAlignment="center"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/black" />
 
                                     <TextView
-                                        android:textColor="@color/black"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20sp"
                                         android:layout_marginTop="8dp"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="S/12.00"
-                                        android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                                        android:textColor="@color/black" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -1003,24 +1030,24 @@
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
+
                                     <com.google.android.material.imageview.ShapeableImageView
                                         android:layout_width="50sp"
                                         android:layout_height="50sp"
                                         android:layout_marginStart="1sp"
-                                        android:scaleType="centerCrop"
                                         android:layout_marginTop="-5sp"
                                         android:onClick="vistaHistorial"
+                                        android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -1035,14 +1062,11 @@
         </ScrollView>
 
 
-
-
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_marginTop="0sp"
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="0sp"
             app:menu="@menu/bottom_navigation_menu" />
 
     </LinearLayout>
