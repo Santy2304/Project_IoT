@@ -7,9 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".ClienteFragments.ClienteVistaTracking">
 
-
-
-
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="105dp"
@@ -65,7 +62,6 @@
             app:srcCompat="@drawable/arrow_back_24px" />
 
 
-
         <Button
             android:id="@+id/orderButton"
             style="@style/Widget.Material3.Button.ElevatedButton"
@@ -75,7 +71,7 @@
             android:layout_marginTop="124dp"
             android:backgroundTint="@color/light_green"
             android:fontFamily="sans-serif-condensed"
-            android:text="En camino"
+            android:text="Repartidor"
             android:textColor="@color/white"
             android:textSize="13sp"
             app:layout_constraintEnd_toStartOf="@+id/cancelButton"
@@ -92,7 +88,7 @@
             android:layout_marginEnd="44dp"
             android:backgroundTint="@color/colorCustomColor1Container_mediumContrast"
             android:fontFamily="sans-serif-condensed"
-            android:text="Entregados"
+            android:text="QR"
             android:textColor="@color/white"
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
