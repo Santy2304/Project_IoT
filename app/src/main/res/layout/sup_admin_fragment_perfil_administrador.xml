@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SuperAdminFragments.VistaPerfilRepartidor">
+    tools:context=".SuperAdminFragments.VistaPerfilAdministrador">
 
     <!--
     <com.google.android.material.appbar.AppBarLayout
@@ -205,13 +205,6 @@
 
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="425dp"
-        android:layout_height="120dp"
-        android:background="@color/light_green"
-        app:layout_anchor="@+id/linearLayout"
-        app:layout_anchorGravity="bottom|center"
-        app:menu="@menu/bottom_navigation_superadmin" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

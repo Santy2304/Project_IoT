@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SuperAdminFragments.VistaPerfilCliente">
+    tools:context=".SuperAdminFragments.RegistroAdministrador2">
 
     <!--
     <com.google.android.material.appbar.AppBarLayout
@@ -136,17 +136,19 @@
 
             <Button
                 android:id="@+id/aceptar"
+                android:onClick="vistaRegistroAdminCorrect"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="@color/light_green"
-                android:text="Aceptar"
+                android:text="Guardar"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/cancelar2"
+                android:onClick="vistaPanelRestaurante"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

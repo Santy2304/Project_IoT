@@ -160,6 +160,7 @@
 
             <Button
                 android:id="@+id/continuar1"
+                android:onClick="vistaRegistroAdmin2"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -171,6 +172,7 @@
 
             <Button
                 android:id="@+id/cancelar1"
+                android:onClick="vistaPanelRestaurante"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

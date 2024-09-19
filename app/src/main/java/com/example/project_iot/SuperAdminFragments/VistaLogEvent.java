@@ -4,22 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
-import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.project_iot.ClienteFragments.ClienteVistaCarrito;
 import com.example.project_iot.R;
-import com.google.android.material.switchmaterial.SwitchMaterial;
 
-public class VistaPerfilAdministrador extends Fragment {
-
-
-    private SwitchMaterial switchMaterial;
-    private TextView tvEstado;
+public class VistaLogEvent extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +20,7 @@ public class VistaPerfilAdministrador extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public VistaPerfilAdministrador() {
+    public VistaLogEvent() {
         // Required empty public constructor
     }
 
@@ -39,11 +30,11 @@ public class VistaPerfilAdministrador extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ClienteVistaTracking.
+     * @return A new instance of fragment ClienteVistaCarrito.
      */
     // TODO: Rename and change types and number of parameters
-    public static VistaPerfilAdministrador newInstance(String param1, String param2) {
-        VistaPerfilAdministrador fragment = new VistaPerfilAdministrador();
+    public static VistaLogEvent newInstance(String param1, String param2) {
+        VistaLogEvent fragment = new VistaLogEvent();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,24 +55,6 @@ public class VistaPerfilAdministrador extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.sup_admin_fragment_perfil_administrador, container, false);
-
-        /*
-        switchMaterial = view.findViewById(R.id.switchMaterial);
-        tvEstado = view.findViewById(R.id.tvEstado);
-
-        switchMaterial.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    tvEstado.setText("Activado");
-                } else {
-                    tvEstado.setText("Desactivado");
-                }
-            }
-        });
-
-         */
-        return view;
+        return inflater.inflate(R.layout.sup_admin_fragment_log_eventos, container, false);
     }
 }

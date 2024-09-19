@@ -81,9 +81,10 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView7"
+                            android:id="@+id/imgCostumer"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
+                            android:onClick="vistaPanelCliente"
                             android:src="@drawable/costumer_green" />
 
                         <TextView
@@ -104,9 +105,10 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView10"
+                            android:id="@+id/imgRepartidor"
                             android:layout_width="82dp"
                             android:layout_height="89dp"
+                            android:onClick="vistaPanelRepartidor"
                             android:src="@drawable/deliver_green2" />
 
                         <TextView
@@ -123,9 +125,10 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView9"
+                            android:id="@+id/imgAdmin"
                             android:layout_width="80dp"
                             android:layout_height="87dp"
+                            android:onClick="vistaPanelAdmin"
                             android:src="@drawable/admin_green" />
 
                         <TextView
@@ -259,6 +262,7 @@
 
                                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                                     android:id="@+id/bt_info"
+                                    android:onClick="vistaPerfilCliente"
                                     style="?attr/floatingActionButtonSmallStyle"
                                     android:layout_marginStart="10sp"
                                     android:layout_width="40dp"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SuperAdminFragments.PanelCliente">
+    tools:context=".SuperAdminFragments.PanelRestaurante">
 
     <!--
     <com.google.android.material.appbar.AppBarLayout
@@ -85,6 +85,7 @@
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/bt_agregar"
+                        android:onClick="vistaRegistroRestaurante1"
                         style="?attr/floatingActionButtonSmallStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -166,6 +167,7 @@
 
                                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                                             android:id="@+id/bt_info"
+                                            android:onClick="vistaRestauranteResumen"
                                             style="?attr/floatingActionButtonSmallStyle"
                                             android:layout_width="40dp"
                                             android:layout_height="40dp"
@@ -274,6 +276,7 @@
 
                                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                                             style="?attr/floatingActionButtonSmallStyle"
+                                            android:onClick="vistaRestauranteResumen"
                                             android:layout_width="40dp"
                                             android:layout_height="40dp"
                                             android:layout_marginStart="10sp"
@@ -380,6 +383,7 @@
 
                                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                                             android:id="@+id/bt_warning"
+                                            android:onClick="vistaRegistroAdmin1"
                                             style="?attr/floatingActionButtonSmallStyle"
                                             android:layout_width="40dp"
                                             android:layout_height="40dp"

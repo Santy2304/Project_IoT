@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SuperAdminFragments.PanelCliente">
+    tools:context=".SuperAdminFragments.PanelAdmin">
 
     <!--
     <com.google.android.material.appbar.AppBarLayout
@@ -82,6 +82,7 @@
 
                         <ImageView
                             android:id="@+id/imageView7"
+                            android:onClick="vistaPanelCliente"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:src="@drawable/costumer_green" />
@@ -105,6 +106,7 @@
 
                         <ImageView
                             android:id="@+id/imageView10"
+                            android:onClick="vistaPanelRepartidor"
                             android:layout_width="82dp"
                             android:layout_height="89dp"
                             android:src="@drawable/deliver_green2" />
@@ -124,6 +126,7 @@
 
                         <ImageView
                             android:id="@+id/imageView9"
+                            android:onClick="vistaPanelAdmin"
                             android:layout_width="80dp"
                             android:layout_height="87dp"
                             android:src="@drawable/admin_green" />
@@ -260,6 +263,7 @@
 
                                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                                     android:id="@+id/bt_info"
+                                    android:onClick="vistaPerfilAdmin"
                                     style="?attr/floatingActionButtonSmallStyle"
                                     android:layout_marginStart="10sp"
                                     android:layout_width="40dp"
