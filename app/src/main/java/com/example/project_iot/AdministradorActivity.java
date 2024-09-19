@@ -11,6 +11,6 @@ public class AdministradorActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.inicio_administrador);
+        setContentView(R.layout.administrador_listado_platos);
     }
 }
