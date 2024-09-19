@@ -16,24 +16,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-15sp"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_width="35sp"
-                android:layout_height="35sp"
-                android:layout_marginTop="40sp"
-                android:onClick="vistaPrincipalCliente"
-                android:src="@drawable/icons8_izquierda_circulo_48"
-                />
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
                 android:layout_marginTop="25sp"
-                android:layout_marginStart="0sp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Carrito"
                 android:textColor="@color/light_green"
                 android:textSize="48sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/cart_button"
                 style="?attr/floatingActionButtonSmallStyle"
