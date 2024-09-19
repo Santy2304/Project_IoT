@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SuperAdminFragments.VistaPerfilCliente">
+    tools:context=".SuperAdminFragments.RegistroRestaurante1">
 
     <!--
     <com.google.android.material.appbar.AppBarLayout
@@ -188,6 +188,7 @@
 
             <Button
                 android:id="@+id/continuar1"
+                android:onClick="vistaRegistroRestaurante2"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -199,6 +200,7 @@
 
             <Button
                 android:id="@+id/cancelar1"
+                android:onClick="vistaPanelRestaurante"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SuperAdminFragments.PanelCliente">
+    tools:context=".SuperAdminFragments.RestauranteHistorialVentas">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -139,6 +139,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/bt_ganancias"
+                        android:onClick="vistaRestauranteResumen"
                         android:layout_width="80sp"
                         android:layout_height="35sp"
                         android:layout_marginStart="12sp"
@@ -152,6 +153,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/bt_carta"
+                        android:onClick="vistaRestaurantePlatillos"
                         android:layout_width="80sp"
                         android:layout_height="35sp"
                         android:layout_marginStart="5sp"
@@ -165,6 +167,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/bt_ventas"
+                        android:onClick="vistaRestauranteHistorialVentas"
                         android:layout_width="80sp"
                         android:layout_height="35sp"
                         android:layout_marginStart="5sp"
@@ -178,6 +181,7 @@
                         app:backgroundTint="@color/light_green" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:onClick="vistaRestauranteUbicacion"
                         android:id="@+id/bt_ubicacion"
                         android:layout_width="80sp"
                         android:layout_height="35sp"
@@ -270,6 +274,7 @@
                                         android:drawableLeft="@drawable/baseline_money_24"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
                                     <TextView
+                                        android:onClick="vistaVentasDetails"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed"
@@ -347,6 +352,7 @@
                                         android:drawableLeft="@drawable/baseline_money_24"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
                                     <TextView
+                                        android:onClick="vistaVentasDetails"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed"
@@ -424,6 +430,7 @@
                                         android:drawableLeft="@drawable/baseline_money_24"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
                                     <TextView
+                                        android:onClick="vistaVentasDetails"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SuperAdminFragments.RegistroRestauranteCorrect"
+    tools:context=".SuperAdminFragments.RegistroAdminCorrect"
     android:background="@color/white">
 
     <TextView
@@ -36,7 +36,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Se ha registrado\n correctamente el\n restaurante"
+        android:text="Se ha registrado\n correctamente el\n administrador"
         android:textAlignment="center"
         android:textColor="@color/light_green"
         android:textStyle="bold"
@@ -49,10 +49,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button"
-        android:onClick="vistaRegistroAdmin1"
+        android:onClick="vistaPanelRestaurante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Continuar"
+        android:text="Aceptar"
         android:textColor="@color/white"
         android:backgroundTint="@color/light_green"
         app:cornerRadius="10dp"

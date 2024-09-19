@@ -1,17 +1,23 @@
 package com.example.project_iot.SuperAdminFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.project_iot.R;
+import com.example.project_iot.SuperAdminActivity;
+import com.google.android.material.appbar.MaterialToolbar;
+
 
 import java.util.Arrays;
 
@@ -19,6 +25,8 @@ public class PanelCliente extends Fragment {
 
     private ViewPager2 viewPager;
     private CarouselAdapter adapter;
+    private MaterialToolbar topAppBar;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -73,6 +81,19 @@ public class PanelCliente extends Fragment {
         viewPager.setAdapter(adapter);
 
          */
+
+        topAppBar.setOnMenuItemClickListener(new MaterialToolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.log_event) {
+                    // Llama al método en la actividad para reemplazar el fragmento
+                    ((SuperAdminActivity) getActivity()).vistaLogEventos();
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
         return view;
     }
 }

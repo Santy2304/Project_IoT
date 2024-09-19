@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SuperAdminFragments.PanelCliente">
+    tools:context=".SuperAdminFragments.RestaurantePlatillos">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -139,6 +139,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/bt_ganancias"
+                        android:onClick="vistaRestauranteResumen"
                         android:layout_width="80sp"
                         android:layout_height="35sp"
                         android:layout_marginStart="12sp"
@@ -152,6 +153,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/bt_carta"
+                        android:onClick="vistaRestaurantePlatillos"
                         android:layout_width="80sp"
                         android:layout_height="35sp"
                         android:layout_marginStart="5sp"
@@ -166,6 +168,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/bt_ventas"
+                        android:onClick="vistaRestauranteHistorialVentas"
                         android:layout_width="80sp"
                         android:layout_height="35sp"
                         android:layout_marginStart="5sp"
@@ -179,6 +182,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/bt_ubicacion"
+                        android:onClick="vistaRestauranteUbicacion"
                         android:layout_width="80sp"
                         android:layout_height="35sp"
                         android:layout_marginStart="5sp"
@@ -274,6 +278,7 @@
                                             app:icon="@drawable/baseline_eye_24"
                                             app:iconSize="30dp"
                                             app:iconTint="@color/black"
+                                            android:onClick="vistaPlatillosDescription"
                                             android:shape="oval"
                                             />
 
@@ -346,8 +351,8 @@
                                             app:icon="@drawable/baseline_eye_24"
                                             app:iconSize="30dp"
                                             app:iconTint="@color/black"
-                                            android:shape="oval"
-                                            />
+                                            android:onClick="vistaPlatillosDescription"
+                                            android:shape="oval"/>
 
                                     </LinearLayout>
                                 </LinearLayout>
@@ -426,6 +431,7 @@
                                             app:iconSize="30dp"
                                             app:iconTint="@color/black"
                                             android:shape="oval"
+                                            android:onClick="vistaPlatillosDescription"
                                             />
 
                                     </LinearLayout>
@@ -497,6 +503,7 @@
                                             app:iconSize="30dp"
                                             app:iconTint="@color/black"
                                             android:shape="oval"
+                                            android:onClick="vistaPlatillosDescription"
                                             />
 
                                     </LinearLayout>
