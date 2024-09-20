@@ -16,7 +16,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.project_iot.ClienteFragments.ClienteVistaCarrito;
 import com.example.project_iot.ClienteFragments.ClienteVistaConfirmacionCompra;
+import com.example.project_iot.ClienteFragments.ClienteVistaDetalle;
 import com.example.project_iot.ClienteFragments.ClienteVistaHistorial;
+import com.example.project_iot.ClienteFragments.ClienteVistaPerfilRepartidor;
+import com.example.project_iot.ClienteFragments.ClienteVistaQR;
 import com.example.project_iot.ClienteFragments.ClienteVistaRestaurante;
 import com.example.project_iot.ClienteFragments.ClienteVistaTracking;
 import com.example.project_iot.ClienteFragments.ClienteVistaUnPlato;
@@ -165,6 +168,41 @@ public class ClienteActivity extends AppCompatActivity {
                     .commit();
         }
     }
+
+
+    public void vistaQr(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaQR.class, null)
+                    .commit();
+        }
+    }
+
+
+    public void vistaPerfilRepartidor(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaPerfilRepartidor.class, null)
+                    .commit();
+        }
+    }
+    public void vistaClienteVistaDetalle(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaDetalle.class, null)
+                    .commit();
+        }
+    }
+
     private int convertDpToPx(int dp) {
         float density = getResources().getDisplayMetrics().density;
         return Math.round(dp * density);
