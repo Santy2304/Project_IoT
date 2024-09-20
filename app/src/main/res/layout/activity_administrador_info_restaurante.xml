@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="129dp"
         android:layout_marginTop="0dp"
         android:scaleType="centerCrop"
@@ -48,9 +48,9 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <LinearLayout
-        android:layout_width="406dp"
-        android:layout_height="301dp"
-        android:layout_marginBottom="212dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="210dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,11 +58,22 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="1.0">
 
-
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Nombre"
+            android:textColor="@color/light_green" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textField"
             android:layout_width="match_parent"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16sp"
             android:layout_height="wrap_content"
             android:hint="Bembos">
 
@@ -72,11 +83,23 @@
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/labelJourney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Horario de atención"
+            android:textColor="@color/light_green"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/horario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16sp"
             android:hint="9:00 am - 19:00 pm">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -86,12 +109,23 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
+        <TextView
+            android:id="@+id/labellocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Ubicación"
+            android:textColor="@color/light_green"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ubicacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Av. Universitarios">
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16sp"
+            android:hint="Av. Universitaria">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -99,6 +133,41 @@
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/orderButton"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95sp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/light_green"
+            android:fontFamily="sans-serif-condensed"
+            android:onClick="vistaConfirmaciónCompra"
+            android:text="Confirmar"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30sp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/red"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Cancelar"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 
