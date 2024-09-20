@@ -165,11 +165,12 @@ public class RepartidorActivity extends AppCompatActivity {
     }
     public void vistaNotificaciones(View view){
         Fragment fragment = getSupportFragmentManager()
-                .findFragmentById(R.id.fragmentoPrincipalRepartidor);
+                .findFragmentById(R.id.fragmentoPrincipalRepartidor /*Id del fragmento que vas a reemplazar*/);
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
-                    .replace(R.id.fragmentoPrincipalRepartidor, notificaciones.class, null)
+                    .replace(R.id.fragmentoPrincipalRepartidor /*Id del fragmento que vas a reemplazar*/,
+                            notificaciones.class /*Clase q se relaciona al fragmento*/, null)
                     .commit();
         }
     }

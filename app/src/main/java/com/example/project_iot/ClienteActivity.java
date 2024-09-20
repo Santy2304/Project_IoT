@@ -16,23 +16,81 @@ import androidx.fragment.app.Fragment;
 
 import com.example.project_iot.ClienteFragments.ClienteVistaCarrito;
 import com.example.project_iot.ClienteFragments.ClienteVistaConfirmacionCompra;
+import com.example.project_iot.ClienteFragments.ClienteVistaDetalle;
 import com.example.project_iot.ClienteFragments.ClienteVistaHistorial;
+import com.example.project_iot.ClienteFragments.ClienteVistaPerfilRepartidor;
+import com.example.project_iot.ClienteFragments.ClienteVistaQR;
 import com.example.project_iot.ClienteFragments.ClienteVistaRestaurante;
 import com.example.project_iot.ClienteFragments.ClienteVistaTracking;
 import com.example.project_iot.ClienteFragments.ClienteVistaUnPlato;
 import com.example.project_iot.ClienteFragments.vistaPrincipalCliente;
 import com.example.project_iot.Generales.notificaciones;
 import com.example.project_iot.Login.InicioSesion;
+import com.example.project_iot.SuperAdminFragments.PanelCliente;
+import com.example.project_iot.SuperAdminFragments.PanelRestaurante;
+import com.example.project_iot.SuperAdminFragments.PerfilSuperAdmin;
 import com.example.project_iot.databinding.ActivityMainBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ClienteActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+    private BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_principal_cliente);
         //Agregamos funcionalidades a los botones
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                /*FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                 */
+
+                if (item.getItemId() == R.id.restaurant) {
+
+                    Fragment fragment = getSupportFragmentManager()
+                            .findFragmentById(R.id.fragmentoPrincipalCliente);
+                    if (fragment != null) {
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                                .replace(R.id.fragmentoPrincipalCliente, vistaPrincipalCliente.class, null)
+                                .commit();
+                    }
+
+                } else if (item.getItemId() == R.id.historial) {
+                    Fragment fragment = getSupportFragmentManager()
+                            .findFragmentById(R.id.fragmentoPrincipalCliente);
+                    if (fragment != null) {
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                                .replace(R.id.fragmentoPrincipalCliente, ClienteVistaHistorial.class, null)
+                                .commit();
+                    }
+                } else if (item.getItemId() == R.id.profile) {
+                    Fragment fragment = getSupportFragmentManager()
+                            .findFragmentById(R.id.fragmentoPrincipalCliente);
+                    if (fragment != null) {
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                                .replace(R.id.fragmentoPrincipalCliente, PerfilSuperAdmin.class, null)
+                                .commit();
+                    }
+                } else {
+                    // handle default case or return false
+                    return false;
+                }
+                return true;
+
+            }
+        });
+
     }
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
@@ -165,6 +223,41 @@ public class ClienteActivity extends AppCompatActivity {
                     .commit();
         }
     }
+
+
+    public void vistaQr(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaQR.class, null)
+                    .commit();
+        }
+    }
+
+
+    public void vistaPerfilRepartidor(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaPerfilRepartidor.class, null)
+                    .commit();
+        }
+    }
+    public void vistaClienteVistaDetalle(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalCliente);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalCliente, ClienteVistaDetalle.class, null)
+                    .commit();
+        }
+    }
+
     private int convertDpToPx(int dp) {
         float density = getResources().getDisplayMetrics().density;
         return Math.round(dp * density);

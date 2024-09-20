@@ -197,9 +197,8 @@
                 </LinearLayout>
 
                 <ScrollView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="400sp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="508dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="10sp"
                     android:layout_marginEnd="10sp">
@@ -211,25 +210,27 @@
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/card1"
+                            style="?attr/materialCardViewElevatedStyle"
                             android:layout_width="365sp"
                             android:layout_height="130sp"
-                            android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            style="?attr/materialCardViewElevatedStyle"
+                            android:layout_marginTop="10dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.516"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:layout_width="110sp"
                                     android:layout_height="130sp"
-                                    app:srcCompat="@drawable/bembos_logo"
                                     android:scaleType="centerCrop"
-                                    />
+                                    app:srcCompat="@drawable/bembos_logo" />
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -241,14 +242,15 @@
                                         android:layout_height="wrap_content"
                                         android:orientation="horizontal"
                                         android:padding="5sp">
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:fontFamily="sans-serif-condensed"
-                                            android:textColor="@color/light_green"
-                                            android:text="#55"
                                             android:layout_weight="1"
-                                            android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="#55"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                                            android:textColor="@color/light_green" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -261,27 +263,28 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
                                         android:fontFamily="sans-serif-condensed"
                                         android:text="Dirección: Av.Urumbamba"
-                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_money_24"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Monto: $/125.30"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed"
-                                        android:text="Monto: $/125.30"
-                                        android:drawableLeft="@drawable/baseline_money_24"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
-                                    <TextView
                                         android:onClick="vistaVentasDetails"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="sans-serif-condensed"
                                         android:text="  Ver detalle del pedido"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
                                         android:textColor="@color/light_green"
-                                        android:textColorHighlight="@color/light_green"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textColorHighlight="@color/light_green" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -289,25 +292,27 @@
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/card2"
+                            style="?attr/materialCardViewElevatedStyle"
                             android:layout_width="365sp"
                             android:layout_height="130sp"
-                            android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            style="?attr/materialCardViewElevatedStyle"
+                            android:layout_marginTop="10dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.516"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:layout_width="110sp"
                                     android:layout_height="130sp"
-                                    app:srcCompat="@drawable/bembos_logo"
                                     android:scaleType="centerCrop"
-                                    />
+                                    app:srcCompat="@drawable/bembos_logo" />
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -319,14 +324,15 @@
                                         android:layout_height="wrap_content"
                                         android:orientation="horizontal"
                                         android:padding="5sp">
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:fontFamily="sans-serif-condensed"
-                                            android:textColor="@color/light_green"
-                                            android:text="#55"
                                             android:layout_weight="1"
-                                            android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="#55"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                                            android:textColor="@color/light_green" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -339,27 +345,28 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
                                         android:fontFamily="sans-serif-condensed"
                                         android:text="Dirección: Av.Urumbamba"
-                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_money_24"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Monto: $/125.30"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed"
-                                        android:text="Monto: $/125.30"
-                                        android:drawableLeft="@drawable/baseline_money_24"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
-                                    <TextView
                                         android:onClick="vistaVentasDetails"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="sans-serif-condensed"
                                         android:text="  Ver detalle del pedido"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
                                         android:textColor="@color/light_green"
-                                        android:textColorHighlight="@color/light_green"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textColorHighlight="@color/light_green" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -367,25 +374,27 @@
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/card3"
+                            style="?attr/materialCardViewElevatedStyle"
                             android:layout_width="365sp"
                             android:layout_height="130sp"
-                            android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            style="?attr/materialCardViewElevatedStyle"
+                            android:layout_marginTop="10dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.516"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:layout_width="110sp"
                                     android:layout_height="130sp"
-                                    app:srcCompat="@drawable/bembos_logo"
                                     android:scaleType="centerCrop"
-                                    />
+                                    app:srcCompat="@drawable/bembos_logo" />
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -397,14 +406,15 @@
                                         android:layout_height="wrap_content"
                                         android:orientation="horizontal"
                                         android:padding="5sp">
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:fontFamily="sans-serif-condensed"
-                                            android:textColor="@color/light_green"
-                                            android:text="#55"
                                             android:layout_weight="1"
-                                            android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="#55"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                                            android:textColor="@color/light_green" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -417,52 +427,56 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
                                         android:fontFamily="sans-serif-condensed"
                                         android:text="Dirección: Av.Urumbamba"
-                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_money_24"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Monto: $/125.30"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed"
-                                        android:text="Monto: $/125.30"
-                                        android:drawableLeft="@drawable/baseline_money_24"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
-                                    <TextView
                                         android:onClick="vistaVentasDetails"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="sans-serif-condensed"
                                         android:text="  Ver detalle del pedido"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
                                         android:textColor="@color/light_green"
-                                        android:textColorHighlight="@color/light_green"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textColorHighlight="@color/light_green" />
                                 </LinearLayout>
 
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
+
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/card4"
+                            style="?attr/materialCardViewElevatedStyle"
                             android:layout_width="365sp"
                             android:layout_height="130sp"
-                            android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            style="?attr/materialCardViewElevatedStyle"
+                            android:layout_marginTop="10dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.516"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:layout_width="110sp"
                                     android:layout_height="130sp"
-                                    app:srcCompat="@drawable/bembos_logo"
                                     android:scaleType="centerCrop"
-                                    />
+                                    app:srcCompat="@drawable/bembos_logo" />
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -474,14 +488,15 @@
                                         android:layout_height="wrap_content"
                                         android:orientation="horizontal"
                                         android:padding="5sp">
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:fontFamily="sans-serif-condensed"
-                                            android:textColor="@color/light_green"
-                                            android:text="#55"
                                             android:layout_weight="1"
-                                            android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="#55"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                                            android:textColor="@color/light_green" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -494,51 +509,55 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
                                         android:fontFamily="sans-serif-condensed"
                                         android:text="Dirección: Av.Urumbamba"
-                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_money_24"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Monto: $/125.30"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed"
-                                        android:text="Monto: $/125.30"
-                                        android:drawableLeft="@drawable/baseline_money_24"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="sans-serif-condensed"
                                         android:text="  Ver detalle del pedido"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
                                         android:textColor="@color/light_green"
-                                        android:textColorHighlight="@color/light_green"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textColorHighlight="@color/light_green" />
                                 </LinearLayout>
 
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
+
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/card5"
+                            style="?attr/materialCardViewElevatedStyle"
                             android:layout_width="365sp"
                             android:layout_height="130sp"
-                            android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
-                            style="?attr/materialCardViewElevatedStyle"
+                            android:layout_marginTop="10dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.516"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:layout_width="110sp"
                                     android:layout_height="130sp"
-                                    app:srcCompat="@drawable/bembos_logo"
                                     android:scaleType="centerCrop"
-                                    />
+                                    app:srcCompat="@drawable/bembos_logo" />
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -550,14 +569,15 @@
                                         android:layout_height="wrap_content"
                                         android:orientation="horizontal"
                                         android:padding="5sp">
+
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:fontFamily="sans-serif-condensed"
-                                            android:textColor="@color/light_green"
-                                            android:text="#55"
                                             android:layout_weight="1"
-                                            android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="#55"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                                            android:textColor="@color/light_green" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -570,26 +590,27 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
                                         android:fontFamily="sans-serif-condensed"
                                         android:text="Dirección: Av.Urumbamba"
-                                        android:drawableLeft="@drawable/baseline_fmd_good_24"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/baseline_money_24"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Monto: $/125.30"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="sans-serif-condensed"
-                                        android:text="Monto: $/125.30"
-                                        android:drawableLeft="@drawable/baseline_money_24"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="sans-serif-condensed"
                                         android:text="  Ver detalle del pedido"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
                                         android:textColor="@color/light_green"
-                                        android:textColorHighlight="@color/light_green"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                        android:textColorHighlight="@color/light_green" />
                                 </LinearLayout>
 
                             </LinearLayout>

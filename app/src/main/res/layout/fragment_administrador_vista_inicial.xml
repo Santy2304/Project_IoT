@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdministradorFragments.AdministradorVistaInicial">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -93,6 +95,7 @@
                 android:backgroundTint="@color/light_green"
                 android:gravity="center_horizontal"
                 android:text="Nuevo plato"
+                android:onClick="verRegistroPlatosParte1"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -244,7 +247,7 @@
                                         android:layout_height="30sp"
                                         android:layout_marginStart="1sp"
                                         android:layout_marginTop="-5sp"
-                                        android:onClick="vistaHistorial"
+                                        android:onClick="de"
                                         android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
@@ -1650,4 +1653,6 @@
             app:menu="@menu/navigation_admin" />
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

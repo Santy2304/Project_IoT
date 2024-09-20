@@ -62,11 +62,12 @@
                 android:layout_height="41dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Todos los campos son obligatorios"
+                android:text="Deben ser 2 imágenes como mínimo"
                 android:textSize="18sp" />
         </LinearLayout>
 
     </LinearLayout>
+
 
 
     <LinearLayout
@@ -149,7 +150,6 @@
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="@color/light_green"
                 android:text="Continuar"
-                android:onClick="verRegistroPlatosParte2"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -161,7 +161,6 @@
                 android:layout_marginStart="8dp"
                 android:backgroundTint="@color/md_theme_error"
                 android:text="Cancelar"
-                android:onClick=""
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 

@@ -1,5 +1,7 @@
 package com.example.project_iot;
 
+
+
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.project_iot.Generales.notificaciones;
 import com.example.project_iot.SuperAdminFragments.HistorialVentasDetalles;
@@ -38,16 +42,88 @@ import com.example.project_iot.SuperAdminFragments.VistaPerfilRepartidor;
 import com.example.project_iot.databinding.ActivityMainBinding;
 import com.example.project_iot.ClienteFragments.ClienteVistaRestaurante;
 import com.example.project_iot.Login.InicioSesion;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
-public class SuperAdminActivity extends AppCompatActivity {
+public class SuperAdminActivity extends AppCompatActivity implements PanelCliente.OnLogEventClickListener {
     private SwitchMaterial switchMaterial;
     private TextView tvEstado;
+    MaterialToolbar topAppBar;
+    private BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_principal_superadmin);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                /*FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                 */
+
+                if (item.getItemId() == R.id.restaurant) {
+
+                    Fragment fragment = getSupportFragmentManager()
+                            .findFragmentById(R.id.fragmentoPrincipalSuperAdmin);
+                    if (fragment != null) {
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                                .replace(R.id.fragmentoPrincipalSuperAdmin, PanelRestaurante.class, null)
+                                .commit();
+                    }
+
+                } else if (item.getItemId() == R.id.principal) {
+                    Fragment fragment = getSupportFragmentManager()
+                            .findFragmentById(R.id.fragmentoPrincipalSuperAdmin);
+                    if (fragment != null) {
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                                .replace(R.id.fragmentoPrincipalSuperAdmin, PanelCliente.class, null)
+                                .commit();
+                    }
+                } else if (item.getItemId() == R.id.profile) {
+                    Fragment fragment = getSupportFragmentManager()
+                            .findFragmentById(R.id.fragmentoPrincipalSuperAdmin);
+                    if (fragment != null) {
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                                .replace(R.id.fragmentoPrincipalSuperAdmin, PerfilSuperAdmin.class, null)
+                                .commit();
+                    }
+                } else {
+                    // handle default case or return false
+                    return false;
+                }
+                return true;
+
+            }
+        });
+
+        /*
+        topAppBar.setOnMenuItemClickListener(new MaterialToolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.log_event) {
+                    // Reemplaza el fragment actual con VistaLogEvent
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragmentoPrincipalSuperAdmin, new VistaLogEvent());
+                    fragmentTransaction.commit();
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
+
+         */
+
 
 
     }
@@ -90,6 +166,18 @@ public class SuperAdminActivity extends AppCompatActivity {
 
      */
     public void vistaLogEventos() {
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalSuperAdmin);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalSuperAdmin, VistaLogEvent.class, null)
+                    .commit();
+        }
+    }
+
+    @Override
+    public void onLogEventClick() {
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmentoPrincipalSuperAdmin);
         if (fragment != null) {

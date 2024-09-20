@@ -67,14 +67,7 @@
 
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="425dp"
-        android:layout_height="120dp"
-        android:background="@color/light_green"
-        app:layout_anchor="@+id/linearLayout"
-        app:layout_anchorGravity="bottom|center"
-        app:menu="@menu/bottom_navigation_superadmin" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout4"
