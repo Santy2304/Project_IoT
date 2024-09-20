@@ -15,6 +15,7 @@ import com.example.project_iot.AdministradorFragments.AdministradorRegistroPlato
 import com.example.project_iot.AdministradorFragments.AdministradorRegistroPlatosParte2;
 import com.example.project_iot.AdministradorFragments.AdministradorReporteClientes;
 import com.example.project_iot.AdministradorFragments.AdministradorReporteComida;
+import com.example.project_iot.AdministradorFragments.AdministradorVistaInicial;
 import com.example.project_iot.ClienteFragments.ClienteVistaCarrito;
 
 public class AdministradorActivity extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class AdministradorActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.vista_principal_admin);
     }
+
 
 
     public void verDetalleCompra(View view){
@@ -37,6 +39,16 @@ public class AdministradorActivity extends AppCompatActivity {
         }
     }
 
+    public void verAdministradorPrincipal(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalAdmin);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalAdmin, AdministradorVistaInicial.class, null)
+                    .commit();
+        }
+    }
     public void verFinalizarRegistroPlato(View view){
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmentoPrincipalAdmin);
@@ -47,7 +59,6 @@ public class AdministradorActivity extends AppCompatActivity {
                     .commit();
         }
     }
-
     public void verAdministrarHistorial(View view){
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmentoPrincipalAdmin);
@@ -78,7 +89,6 @@ public class AdministradorActivity extends AppCompatActivity {
                     .commit();
         }
     }
-
     public void verReporteClientes(View view){
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmentoPrincipalAdmin);
