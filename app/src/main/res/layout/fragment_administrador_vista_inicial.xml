@@ -73,6 +73,7 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="0sp"
                 android:scaleType="centerCrop"
+                android:onClick="verInfoRestaurante"
                 android:src="@drawable/bembos_logo" />
 
 
@@ -237,7 +238,7 @@
                                         android:layout_height="30sp"
                                         android:layout_marginStart="1sp"
                                         android:layout_marginTop="-5sp"
-                                        android:onClick="vistaHistorial"
+                                        android:onClick="verAdmiDetallePlato"
                                         android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />
@@ -421,7 +422,7 @@
                                         android:layout_height="30sp"
                                         android:layout_marginStart="1sp"
                                         android:layout_marginTop="-5sp"
-                                        android:onClick="vistaHistorial"
+                                        android:onClick="admi"
                                         android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/ojito" />

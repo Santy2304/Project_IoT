@@ -161,7 +161,7 @@
                 android:layout_marginStart="8dp"
                 android:backgroundTint="@color/md_theme_error"
                 android:text="Cancelar"
-                android:onClick=""
+                android:onClick="verAdministradorPrincipal"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
