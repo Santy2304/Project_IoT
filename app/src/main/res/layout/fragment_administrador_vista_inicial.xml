@@ -95,6 +95,7 @@
                 android:backgroundTint="@color/light_green"
                 android:gravity="center_horizontal"
                 android:text="Nuevo plato"
+                android:onClick="verRegistroPlatosParte1"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -246,7 +247,7 @@
                                         android:layout_height="30sp"
                                         android:layout_marginStart="1sp"
                                         android:layout_marginTop="-5sp"
-                                        android:onClick="vistaHistorial"
+                                        android:onClick="de"
                                         android:scaleType="centerCrop"
                                         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
                                         app:srcCompat="@drawable/edit" />
