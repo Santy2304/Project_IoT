@@ -53,8 +53,6 @@
                         android:textStyle="bold"
                         android:textSize="40sp"/>
                 </LinearLayout>
-
-
                 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="400sp"
                     android:layout_height="wrap_content"
@@ -68,7 +66,6 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/card1"
                             style="?attr/materialCardViewElevatedStyle"
                             android:layout_width="365sp"
                             android:layout_height="130sp"
@@ -94,6 +91,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
+                                    android:textColor="@color/black"
                                     android:padding="10dp">
 
                                     <LinearLayout
@@ -114,6 +112,8 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
+
+                                            android:textColor="@color/black"
                                             android:fontFamily="sans-serif-condensed"
                                             android:text="23/09/24 - 19:00"
                                             android:textAppearance="?attr/textAppearanceTitleMedium" />
@@ -122,6 +122,8 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+
+                                        android:textColor="@color/black"
                                         android:fontFamily="sans-serif-condensed"
                                         android:text="Un restaurante ha sido creado"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
@@ -138,9 +140,7 @@
 
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
-
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/card2"
                             style="?attr/materialCardViewElevatedStyle"
                             android:layout_width="365sp"
                             android:layout_height="130sp"
@@ -166,6 +166,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
+                                    android:textColor="@color/black"
                                     android:padding="10dp">
 
                                     <LinearLayout
@@ -186,6 +187,8 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
+
+                                            android:textColor="@color/black"
                                             android:fontFamily="sans-serif-condensed"
                                             android:text="23/09/24 - 19:00"
                                             android:textAppearance="?attr/textAppearanceTitleMedium" />
@@ -194,79 +197,8 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:fontFamily="sans-serif-condensed"
-                                        android:text="Un restaurante ha sido creado"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="sans-serif-condensed"
-                                        android:text="Ver detalles"
-                                        android:textAppearance="?attr/textAppearanceTitleMedium"
-                                        android:textColor="@color/light_green"
-                                        android:textColorHighlight="@color/light_green" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/card3"
-                            style="?attr/materialCardViewElevatedStyle"
-                            android:layout_width="365sp"
-                            android:layout_height="130sp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.516"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="110sp"
-                                    android:layout_height="130sp"
-                                    android:scaleType="centerCrop"
-                                    app:srcCompat="@drawable/deligo" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:padding="10dp">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="horizontal"
-                                        android:padding="5sp">
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:fontFamily="sans-serif-condensed"
-                                            android:text="#55"
-                                            android:textAppearance="?attr/textAppearanceTitleMedium"
-                                            android:textColor="@color/light_green" />
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:fontFamily="sans-serif-condensed"
-                                            android:text="23/09/24 - 19:00"
-                                            android:textAppearance="?attr/textAppearanceTitleMedium" />
-                                    </LinearLayout>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
                                         android:fontFamily="sans-serif-condensed"
                                         android:text="Un restaurante ha sido creado"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
@@ -283,9 +215,7 @@
 
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
-
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/card4"
                             style="?attr/materialCardViewElevatedStyle"
                             android:layout_width="365sp"
                             android:layout_height="130sp"
@@ -311,6 +241,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
+                                    android:textColor="@color/black"
                                     android:padding="10dp">
 
                                     <LinearLayout
@@ -331,6 +262,8 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
+
+                                            android:textColor="@color/black"
                                             android:fontFamily="sans-serif-condensed"
                                             android:text="23/09/24 - 19:00"
                                             android:textAppearance="?attr/textAppearanceTitleMedium" />
@@ -339,6 +272,8 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+
+                                        android:textColor="@color/black"
                                         android:fontFamily="sans-serif-condensed"
                                         android:text="Un restaurante ha sido creado"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />
@@ -355,9 +290,7 @@
 
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
-
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/card5"
                             style="?attr/materialCardViewElevatedStyle"
                             android:layout_width="365sp"
                             android:layout_height="130sp"
@@ -383,6 +316,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
+                                    android:textColor="@color/black"
                                     android:padding="10dp">
 
                                     <LinearLayout
@@ -403,6 +337,8 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
+
+                                            android:textColor="@color/black"
                                             android:fontFamily="sans-serif-condensed"
                                             android:text="23/09/24 - 19:00"
                                             android:textAppearance="?attr/textAppearanceTitleMedium" />
@@ -411,6 +347,233 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+
+                                        android:textColor="@color/black"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Un restaurante ha sido creado"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Ver detalles"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/light_green"
+                                        android:textColorHighlight="@color/light_green" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView
+                            style="?attr/materialCardViewElevatedStyle"
+                            android:layout_width="365sp"
+                            android:layout_height="130sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.516"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="110sp"
+                                    android:layout_height="130sp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/deligo" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:textColor="@color/black"
+                                    android:padding="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="5sp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="#55"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                                            android:textColor="@color/light_green" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:textColor="@color/black"
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="23/09/24 - 19:00"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:textColor="@color/black"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Un restaurante ha sido creado"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Ver detalles"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/light_green"
+                                        android:textColorHighlight="@color/light_green" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView
+                            style="?attr/materialCardViewElevatedStyle"
+                            android:layout_width="365sp"
+                            android:layout_height="130sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.516"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="110sp"
+                                    android:layout_height="130sp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/deligo" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:textColor="@color/black"
+                                    android:padding="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="5sp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="#55"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                                            android:textColor="@color/light_green" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:textColor="@color/black"
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="23/09/24 - 19:00"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:textColor="@color/black"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Un restaurante ha sido creado"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="Ver detalles"
+                                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                                        android:textColor="@color/light_green"
+                                        android:textColorHighlight="@color/light_green" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView
+                            style="?attr/materialCardViewElevatedStyle"
+                            android:layout_width="365sp"
+                            android:layout_height="130sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.516"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="110sp"
+                                    android:layout_height="130sp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/deligo" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:textColor="@color/black"
+                                    android:padding="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="5sp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="#55"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                                            android:textColor="@color/light_green" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:textColor="@color/black"
+                                            android:fontFamily="sans-serif-condensed"
+                                            android:text="23/09/24 - 19:00"
+                                            android:textAppearance="?attr/textAppearanceTitleMedium" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:textColor="@color/black"
                                         android:fontFamily="sans-serif-condensed"
                                         android:text="Un restaurante ha sido creado"
                                         android:textAppearance="?attr/textAppearanceTitleMedium" />

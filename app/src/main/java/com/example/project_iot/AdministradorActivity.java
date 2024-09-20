@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.project_iot.AdministradorFragments.AdministradorDetalleCompra;
+import com.example.project_iot.AdministradorFragments.AdministradorDetallePlato;
 import com.example.project_iot.AdministradorFragments.AdministradorFinalizarRegistroPlato;
 import com.example.project_iot.AdministradorFragments.AdministradorHistorial;
 import com.example.project_iot.AdministradorFragments.AdministradorInfoRestaurante;
@@ -106,6 +107,17 @@ public class AdministradorActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
                     .replace(R.id.fragmentoPrincipalAdmin, AdministradorReporteComida.class, null)
+                    .commit();
+        }
+    }
+
+    public void verAdmiDetallePlato(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalAdmin);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalAdmin, AdministradorDetallePlato.class, null)
                     .commit();
         }
     }
