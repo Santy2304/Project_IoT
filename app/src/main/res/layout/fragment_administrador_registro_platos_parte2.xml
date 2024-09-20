@@ -150,6 +150,7 @@
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="@color/light_green"
                 android:text="Continuar"
+                android:onClick="verFinalizarRegistroPlato"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -159,6 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:onClick="verRegistroPlatosParte1"
                 android:backgroundTint="@color/md_theme_error"
                 android:text="Cancelar"
                 android:textColor="@color/white"
