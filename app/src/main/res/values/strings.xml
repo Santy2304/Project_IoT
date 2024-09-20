@@ -24,6 +24,7 @@
     <string name="precio">Precio</string>
     <string name="nombre1">Nombre</string>
     <string name="descripcion">Descripción</string>
+    <string name="descripcionBurger">Es la comida principal del Crustaceo Cascarudo,\nsu aspecto es similar a una hamburguesa</string>
 
     <string-array name="elementos">
         <item>Tipo de Documento</item>
