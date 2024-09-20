@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import com.example.project_iot.AdministradorFragments.AdministradorDetalleCompra;
 import com.example.project_iot.AdministradorFragments.AdministradorFinalizarRegistroPlato;
 import com.example.project_iot.AdministradorFragments.AdministradorHistorial;
+import com.example.project_iot.AdministradorFragments.AdministradorInfoRestaurante;
 import com.example.project_iot.AdministradorFragments.AdministradorRegistroPlatosParte1;
 import com.example.project_iot.AdministradorFragments.AdministradorRegistroPlatosParte2;
 import com.example.project_iot.AdministradorFragments.AdministradorReporteClientes;
@@ -38,7 +39,6 @@ public class AdministradorActivity extends AppCompatActivity {
                     .commit();
         }
     }
-
     public void verAdministradorPrincipal(View view){
         Fragment fragment = getSupportFragmentManager()
                 .findFragmentById(R.id.fragmentoPrincipalAdmin);
@@ -109,6 +109,28 @@ public class AdministradorActivity extends AppCompatActivity {
                     .commit();
         }
     }
+
+    public void verInfoRestaurante(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalAdmin);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalAdmin, AdministradorInfoRestaurante.class, null)
+                    .commit();
+        }
+    }
+    public void verReportePlato(View view){
+        Fragment fragment = getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentoPrincipalAdmin);
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    .replace(R.id.fragmentoPrincipalAdmin, AdministradorReporteComida.class, null)
+                    .commit();
+        }
+    }
+
 
 
 
